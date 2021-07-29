@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load static %}
+<!-- CSS 스타트 -->
+{% block style %}
+<!-- CSS는 따로 빼지 마시고 이쪽에 따로 작성하셔도 됩니다. -->
+{% endblock %}
+<!-- CSS 끝 -->
+<!-- 본문내용 스타트 -->
+{% block content %}
+<br>
+<div class="container my-1">
+
+    <table class="table my-1">
+        <thead>
+            <tr class="thead-dark">
+                <th>파라다이스 펜션에 어서오세요! (Welcome To Paradise Pension)</th>
+            </tr>
+        </thead>
+    </table>
+
+    <div class="container my-3">
+    <!-- 카드 스타일-->
+
+        <div class="card" id="main">
+          <div class="card-body" style="text-align: center;">
+            <img src="{% static 'pension_main.jpg' %}"
+                 style="max-width: 100%; height: auto; display: block;" alt="main">
+          </div>
+        </div>
+        <br>
+        <div class="card">
+          <div class="container my-3">
+              <div class="row">
+                <div class="col-4">
+                  <div class="card text-white bg-info">
+                    <div class="card-header" style="text-align: center;">
+                      BUSINESS INFO
+                    </div>
+                    <div class="card-body" style="text-align: center;">
+                      <p class="card-text"> 회사명 : 펜션파다라이스<br>
+                          사업자등록번호 : 123-12-12345<br>
+                          통신판매업신고 : 2021-강원oo-00</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="card text-white bg-success">
+                    <div class="card-header" style="text-align: center;">
+                      ACCOUNT INFO
+                    </div>
+                    <div class="card-body" style="text-align: center;">
+                      <p class="card-text">신한은행(ㅇㅇㅇ)<br>
+                          000-000-000000</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="card text-white bg-info">
+                    <div class="card-header" style="text-align: center;">
+                      COPYRIGHT
+                    </div>
+                    <div class="card-body" style="text-align: center;">
+                      <p class="card-text"><strong>Copyright 2021© <br>
+                          파이썬 웹 1조.</strong></p><br>
+                          포트폴리오용 페이지입니다.
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+    </div>
+</div>
+
+<!-- 위의 내용은 일단은 기본형식으로 하고 아래부터 HTML 코드로 작성하시면 됩니다. -->
+
+{% endblock %}
+<!-- 본문내용 끝 -->
