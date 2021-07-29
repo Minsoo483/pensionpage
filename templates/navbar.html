@@ -8,19 +8,23 @@
         <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2" id="navbarNav">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item" style="padding-left:50px;">
-                    <a class="nav-link" href="{% url 'index:introduce' %}"><strong>펜션소개/서비스</strong></a>
+                    <a class="nav-link" href="{% url 'index:introduce' %}"><strong>펜션소개</strong></a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'index:test1' %}"><strong>객실정보</strong></a>
+                    <a class="nav-link" href="{% url 'index:room' %}"><strong>객실정보</strong></a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'index:test2' %}"><strong>주변여행지정보</strong></a>
+                    <a class="nav-link" href="{% url 'index:travel' %}"><strong>여행지정보</strong></a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'psbo:board' %}"><strong>파라다이스 게시판</strong></a>
+                    <a class="nav-link" href="{% url 'index:fac' %}"><strong>편의시설정보</strong></a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'psbo:board' %}"><strong>자유게시판</strong></a>
                 </li>
 
             </ul>
@@ -50,15 +54,15 @@
             <ul class="navbar-nav ml-auto">
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'index:test3' %}"><strong>예약안내</strong></a>
+                    <a class="nav-link" href="{% url 'index:reservation' %}"><strong>예약안내</strong></a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'index:test5' %}"><strong>실시간예약</strong></a>
+                    <a class="nav-link" href="{% url 'index:reservating' %}"><strong>실시간예약</strong></a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'index:test4' %}"><strong>오시는길</strong></a>
+                    <a class="nav-link" href="{% url 'index:location' %}"><strong>오시는길</strong></a>
                 </li>
 
                 <li class="nav-item">

@@ -9,21 +9,25 @@ def introduce(request):
     return render(request, 'index/introduce.html')
 
 
-def test1(request):
-    return render(request, 'index/test1.html')
+def room(request):
+    return render(request, 'index/room_info.html')
 
 
-def test2(request):
-    return render(request, 'index/test2.html')
+def travel(request):
+    return render(request, 'index/travel_info.html')
 
 
-def test3(request):
-    return render(request, 'index/test3.html')
+def fac(request):
+    return render(request, 'index/fac_info.html')
 
 
-def test4(request):
-    return render(request, 'index/test4.html')
+def reservation(request):
+    return render(request, 'index/reservation.html')
 
 
-def test5(request):
-    return render(request, 'index/test5.html')
+def location(request):
+    return render(request, 'index/location.html')
+
+
+def reservating(request):
+    return render(request, 'index/reservating.html')

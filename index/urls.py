@@ -6,9 +6,10 @@ app_name = 'index'
 urlpatterns = [
     path('', views.index, name='index'),
     path('introduce/', views.introduce, name='introduce'),
-    path('test1/', views.test1, name='test1'),
-    path('test2/', views.test2, name='test2'),
-    path('test3/', views.test3, name='test3'),
-    path('test4/', views.test4, name='test4'),
-    path('test5/', views.test5, name='test5'),
+    path('room/', views.room, name='room'),
+    path('travel/', views.travel, name='travel'),
+    path('fac/', views.fac, name='fac'),
+    path('reservation/', views.reservation, name='reservation'),
+    path('location', views.location, name='location'),
+    path('reservating/', views.reservating, name='reservating'),
 ]
