@@ -31,3 +31,7 @@ def location(request):
 
 def reservating(request):
     return render(request, 'index/reservating.html')
+
+
+def test(request):
+    return render(request, 'index/test.html')
