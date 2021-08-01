@@ -35,3 +35,13 @@ def reservating(request):
 
 def test(request):
     return render(request, 'index/test.html')
+
+
+def room101(request):
+    return render(request, 'index/room/101.html')
+
+def room201(request):
+    return render(request, 'index/room/201.html')
+
+def room301(request):
+    return render(request, 'index/room/301.html')

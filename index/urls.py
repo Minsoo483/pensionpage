@@ -13,6 +13,8 @@ urlpatterns = [
     path('location', views.location, name='location'),
     path('reservating/', views.reservating, name='reservating'),
 
+    path('room/101/', views.room101, name='room101'),
+    path('room/201/', views.room201, name='room201'),
+    path('room/301/', views.room301, name='room301'),
 
-    path('test/', views.test, name='test'),
 ]
