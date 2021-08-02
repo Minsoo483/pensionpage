@@ -17,10 +17,13 @@
 <!-- CSS 끝 -->
 <!-- 본문내용 스타트 -->
 {% block content %}
+<br>
+<div class="container my-1">
+  <div class="card">
     <div class="container my-4">
         <div class="d-flex justify-content-between border-bottom">
             <div>
-                횡성 꿈나무 펜션
+                <strong>Pension Paradise 실시간예약안내</strong>
             </div>
             <div>
                 <ul class="nav list-unstyled">
@@ -60,6 +63,8 @@
             </tbody>
         </table>
     </div>
+  </div>
+</div>
 <form method="get" action="{% url 'index:reserve' %}" id="time">
     <input type="hidden" id="year" name="year" value="{{year|default_if_none:'' }}">
     <input type="hidden" id="month" name="month" value="{{month|default_if_none:'' }}">

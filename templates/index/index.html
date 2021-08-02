@@ -10,14 +10,19 @@
 <br>
     <div class="container my-1">
     <!-- 카드 스타일-->
-
         <div class="card" id="main">
+
           <div class="card-body" style="text-align: center;">
             <img src="{% static 'pension_main.jpg' %}"
                  style="max-width: 100%; height: auto; display: block; border-radius: 10px;" alt="main">
           </div>
 
+          <div style="text-align: center;">
+              <button type="button" class="btn btn-primary">Paradise Pension 주요 안내사항</button>
+          </div>
+
           <div class="row">
+
                 <div class="col-4">
                   <div class="card-body">
                     <img src="{% static 'main_banner2.jpg' %}"
@@ -28,6 +33,7 @@
                     </div>
                   </div>
                 </div>
+
                 <div class="col-4">
                   <div class="card-body">
                     <img src="{% static 'main_banner1.jpg' %}"
@@ -39,6 +45,7 @@
                     </div>
                   </div>
                 </div>
+
                 <div class="col-4">
                   <div class="card-body">
                     <img src="{% static 'main_banner3.jpg' %}"
@@ -50,12 +57,11 @@
                     </div>
                   </div>
                 </div>
+
           </div>
+
         </div>
-
-
     </div>
-
 <!-- 위의 내용은 일단은 기본형식으로 하고 아래부터 HTML 코드로 작성하시면 됩니다. -->
 
 {% endblock %}
