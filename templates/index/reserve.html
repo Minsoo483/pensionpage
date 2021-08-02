@@ -19,6 +19,9 @@
     .paywindow tr td{ width:10rem;height:5rem;}
     .paywindow tr td:nth-of-type(2){ color:blue }
     .result {color:red}
+    .resultwindow {border-style:none}
+    .resultwindow tr td{ width:15rem ; text-align:right; height:5rem ; font-weight:bold;font-size:1.2rem}
+
 <!-- CSS는 따로 빼지 마시고 이쪽에 따로 작성하셔도 됩니다. -->
 {% endblock %}
 <!-- CSS 끝 -->
@@ -172,7 +175,7 @@
             <div class="pt-4" style="padding-right:8rem">
                 <div class="circle reservate d-inline-block"></div>예약완료
                 <div>102호(32평)</div>
-                <div>기준 2명/최대 2명</div>
+                <div>기준 4명/최대4명</div>
                 <div class="price2"></div>
             </div>
             <div class="mt-5">
@@ -241,7 +244,7 @@
             <div class="m-3" style="width:10rem ;height:10rem;background:url({% static 'reImg/201호.jpg'%}) no-repeat; background-size:auto 100%"></div>
             <div class="pt-4" style="padding-right:8rem">
                 <div class="circle reservate d-inline-block"></div>예약완료
-                <div>201호(32평)</div>
+                <div>201호(10평)</div>
                 <div>기준 2명/최대 2명</div>
                 <div class="price2"></div>
             </div>
@@ -311,8 +314,8 @@
             <div class="m-3" style="width:10rem ;height:10rem;background:url({% static 'reImg/202호.jpg'%}) no-repeat; background-size:auto 100%"></div>
             <div class="pt-4" style="padding-right:8rem">
                 <div class="circle reservate d-inline-block"></div>예약완료
-                <div>202호(32평)</div>
-                <div>기준 2명/최대 4명</div>
+                <div>202호(10평)</div>
+                <div>기준 2명/최대 2명</div>
                 <div class="price2"></div>
             </div>
             <div class="mt-5">
@@ -381,7 +384,7 @@
             <div class="m-3" style="width:10rem ;height:10rem;background:url({% static 'reImg/301호.jpg'%}) no-repeat; background-size:auto 100%"></div>
             <div class="pt-4" style="padding-right:8rem">
                 <div class="circle reservate d-inline-block"></div>예약완료
-                <div>301호(32평)</div>
+                <div>301호(22평)</div>
                 <div>기준 2명/최대 4명</div>
                 <div class="price2"></div>
             </div>
@@ -451,8 +454,8 @@
             <div class="m-3" style="width:10rem ;height:10rem;background:url({% static 'reImg/302호.jpg'%}) no-repeat; background-size:auto 100%"></div>
             <div class="pt-4" style="padding-right:8rem">
                 <div class="circle reservate d-inline-block"></div>예약완료
-                <div>302호(32평)</div>
-                <div>기준 2명/최대 2명</div>
+                <div>302호(22평)</div>
+                <div>기준 2명/최대 4명</div>
                 <div class="price2"></div>
             </div>
             <div class="mt-5">
@@ -521,7 +524,7 @@
             <div class="m-3" style="width:10rem ;height:10rem;background:url({% static 'reImg/303호.jpg'%}) no-repeat; background-size:auto 100%"></div>
             <div class="pt-4" style="padding-right:8rem">
                 <div class="circle reservate d-inline-block"></div>예약완료
-                <div>303호(32평)</div>
+                <div>303호(15평)</div>
                 <div>기준 2명/최대 2명</div>
                 <div class="price2"></div>
             </div>
@@ -591,8 +594,8 @@
             <div class="m-3" style="width:10rem ;height:10rem;background:url({% static 'reImg/304호.jpg'%}) no-repeat; background-size:auto 100%"></div>
             <div class="pt-4" style="padding-right:8rem">
                 <div class="circle reservate d-inline-block"></div>예약완료
-                <div>304호(32평)</div>
-                <div>기준 4명/최대 4명</div>
+                <div>304호(15평)</div>
+                <div>기준 2명/최대 2명</div>
                 <div class="price2"></div>
             </div>
             <div class="mt-5">
@@ -656,34 +659,52 @@
                 <div class="h5 price"></div>
             </div>
         </div>
-        <div>
-            <table class="paywindow text-center">
-                <tr>
-                    <td></td>
-                    <td>현장결제</td>
-                    <td>즉시결제</td>
-                </tr>
-                <tr>
-                    <td>객실 이용금액</td>
-                    <td>-</td>
-                    <td class="roompay">0원</td>
-                </tr>
-                <tr>
-                    <td>인원 추가금액</td>
-                    <td>0원</td>
-                    <td>0원</td>
-                </tr>
-                <tr class="border-top">
-                    <td>합계</td>
-                    <td>0원</td>
-                    <td class="result">0원</td>
-                </tr>
-                <tr>
-                    <td>최종 이용금액</td>
-                    <td></td>
-                    <td class="sum">0원</td>
-                </tr>
-            </table>
+        <div class="row">
+            <div class="col-6">
+                <table class="paywindow text-center">
+                    <tr>
+                        <td></td>
+                        <td>현장결제</td>
+                        <td>즉시결제</td>
+                    </tr>
+                    <tr>
+                        <td>객실 이용금액</td>
+                        <td>-</td>
+                        <td class="roompay">0원</td>
+                    </tr>
+                    <tr>
+                        <td>인원 추가금액</td>
+                        <td>0원</td>
+                        <td>0원</td>
+                    </tr>
+                    <tr class="border-top">
+                        <td>합계</td>
+                        <td>0원</td>
+                        <td class="result">0원</td>
+                    </tr>
+                    <tr>
+                        <td>최종 이용금액</td>
+                        <td></td>
+                        <td class="sum">0원</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-6">
+                <table class="float-right resultwindow">
+                    <tr>
+                        <td>총 결제금액</td>
+                        <td class="roompay">0원</td>
+                    </tr>
+                    <tr>
+                        <td>입실 시 현장 결제 금액</td>
+                        <td style="color:red">0원</td>
+                    </tr>
+                    <tr>
+                        <td>지금 즉시 결제 금액</td>
+                        <td class="result" style="color:blue">0원</td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </div>
 <form method="get" action="{% url 'index:reserve' %}" id="time">
