@@ -1,5 +1,6 @@
+import json
 from django.shortcuts import render
-
+from .models import Room
 
 def index(request):
     return render(request, 'index/index.html')
@@ -31,6 +32,18 @@ def location(request):
 
 def reservating(request):
     return render(request, 'index/reservating.html')
+
+def reservating2(request):
+    return render(request, 'index/reservating2.html')
+
+def reserve(request):
+    year = request.GET.get('year','0')
+    month = request.GET.get('month','13')
+    date = request.GET.get('date','32')
+    roomN = request.GET.get('roomN','000')
+    rooms = Room.objects.all()
+    context={'year':year,'month' :month,'date':date,'Sroom':roomN , 'rooms':rooms ,'room_js':json.dumps([room.to_json() for room in rooms])}
+    return render(request,'index/reserve.html',context)
 
 
 def test(request):
