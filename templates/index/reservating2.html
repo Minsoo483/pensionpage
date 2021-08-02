@@ -26,8 +26,7 @@
                 <ul class="nav list-unstyled">
                     <li class="nav-item"><a class="nav-link" href="{% url 'index:reservating2' %}">예약달력</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'index:reserve' %}">예약하기</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">예약확인</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">요금안내</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'index:charge_info' %}">요금안내</a></li>
                 </ul>
             </div>
         </div>
@@ -36,14 +35,13 @@
                     <div class="circle reservate"></div>예약하기 <div class="circle rewait"></div>입금대기
                     <div class="circle recomplet"></div>예약완료 <div class="circle salewait"></div>판매대기
                 </div>
-                <div class="YearMonth">
+                <div class="YearMonth mr-3">
                     <button class="prebtn"><i class="fas fa-caret-left"></i></button>
                     <label class="YM"></label>
                     <button class="nextbtn"><i class="fas fa-caret-right"></i></button>
                 </div>
                 <div>
                     <button class="Now">오늘</button>
-                    <button class="" data-uri="">요금보기</button>
                 </div>
         </div>
         <table class="table my-3">

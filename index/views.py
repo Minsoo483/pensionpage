@@ -45,6 +45,9 @@ def reserve(request):
     context={'year':year,'month' :month,'date':date,'Sroom':roomN , 'rooms':rooms ,'room_js':json.dumps([room.to_json() for room in rooms])}
     return render(request,'index/reserve.html',context)
 
+def charge_info(request):
+    return render(request, 'index/charge_info.html')
+
 
 def test(request):
     return render(request, 'index/test.html')

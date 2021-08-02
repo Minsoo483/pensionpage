@@ -1,0 +1,351 @@
+{% extends 'base.html' %}
+{% load static %}
+<!-- CSS 스타트 -->
+{% block style %}
+    .table thead th {vertical-align:middle;}
+    .table td { padding:2rem 1rem;}
+<!-- CSS는 따로 빼지 마시고 이쪽에 따로 작성하셔도 됩니다. -->
+
+{% endblock %}
+<!-- CSS 끝 -->
+<!-- 본문내용 스타트 -->
+{% block content %}
+<div>
+    <div>
+
+    </div>
+</div>
+<div class="container my-3">
+  <h5 id="charge_info">[ 요 금 안 내 ]</h5>
+        <ul class="nav nav-tabs my-3" id="pricetab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="off_season-tab" data-toggle="tab" href="#off_season" role="tab"
+                   aria-controls="off_season" aria-selected="true">비수기</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="mid_season-tab" data-toggle="tab"
+            href="#mid_season" role="tab" aria-controls="mid_season" aria-selected="false">준성수기</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="peak_season-tab" data-toggle="tab"
+            href="#peak_season" role="tab" aria-controls="peak_season" aria-selected="false">성수기</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="priceboard">
+            <div class="tab-pane fade show active" id="off_season" role="tabpanel" aria-labelledby="off_season-tab">
+                <table class="table table-hover">
+                    <caption style="caption-side:top;" class="text-right text-muted small">*아래 요금은 실제 적용일에 따라 다르게 적용될 수 있습니다.</caption>
+                    <thead class="text-center" style="background-color:#eee">
+                        <tr>
+                            <th>객실명</th>
+                            <th>형태</th>
+                            <th>평수</th>
+                            <th>기준/최대</th>
+                            <th>주중<br><small class="text-muted font-weight-bold">(일~목)</small></th>
+                            <th>금요일</th>
+                            <th>주말<br><small class="text-muted font-weight-bold">(토,공휴일 전일)</small></th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-center ">
+                        <tr>
+                            <td class="align-middle" class="align-middle">101호</td>
+                            <td class="align-middle" class="align-middle">거실형/복층형/침대룸</td>
+                            <td class="align-middle">106㎡/32평</td>
+                            <td class="align-middle">4명/4명</td>
+                            <td class="align-middle" class="align-middle"><del class="small text-muted">210,000원</del><br>60,000원</td>
+                            <td class="align-middle text-primary"><del class="small text-muted">210,000원</del><br>160,000원</td>
+                            <td class="align-middle text-danger"><del class="small text-muted">230,000원</del><br>180,000원</td>
+                        </tr>
+                        <tr>
+                            <td class="align-middle">102호(독채)</td>
+                            <td class="align-middle">거실형/복층형/침대룸</td>
+                            <td class="align-middle">106㎡/32평</td>
+                            <td class="align-middle">4명/4명</td>
+                            <td class="align-middle"><del class="small text-muted">210,000원</del><br>160,000원</td>
+                            <td class="align-middle text-primary"><del class="small text-muted">210,000원</del><br>160,000원</td>
+                            <td class="align-middle text-danger"><del class="small text-muted">250,000원</del><br>200,000원</td>
+                        </tr>
+                        <tr>
+                            <td class="align-middle">201호(스파)</td>
+                            <td class="align-middle">원룸형/침대룸</td>
+                            <td class="align-middle">33㎡/10평</td>
+                            <td class="align-middle">2명/2명</td>
+                            <td class="align-middle"><del class="small text-muted">90,000원</del><br>70,000원</td>
+                            <td class="align-middle text-primary"><del class="small text-muted">90,000원</del><br>70,000원</td>
+                            <td class="align-middle text-danger"><del class="small text-muted">110,000원</del><br>90,000원</td>
+                        </tr>
+                        <tr>
+                            <td class="align-middle">202호(스파)</td>
+                            <td class="align-middle">원룸형/침대룸</td>
+                            <td class="align-middle">33㎡/10평</td>
+                            <td class="align-middle">2명/2명</td>
+                            <td class="align-middle"><del class="small text-muted">90,000원</del><br>70,000원</td>
+                            <td class="align-middle text-primary"><del class="small text-muted">90,000원</del><br>70,000원</td>
+                            <td class="align-middle text-danger"><del class="small text-muted">110,000원</del><br>90,000원</td>
+                        </tr>
+                        <tr>
+                            <td class="align-middle">301호(스파)</td>
+                            <td class="align-middle">거실형/침대룸</td>
+                            <td class="align-middle">73㎡/22평</td>
+                            <td class="align-middle">2명/4명</td>
+                            <td class="align-middle"><del class="small text-muted">140,000원</del><br>100,000원</td>
+                            <td class="align-middle text-primary"><del class="small text-muted">140,000원</del><br>100,000원</td>
+                            <td class="align-middle text-danger"><del class="small text-muted">160,000원</del><br>120,000원</td>
+                        </tr>
+                        <tr>
+                            <td class="align-middle">302호(스파)</td>
+                            <td class="align-middle">거실형/침대룸</td>
+                            <td class="align-middle">73㎡/22평</td>
+                            <td class="align-middle">2명/4명</td>
+                            <td class="align-middle"><del class="small text-muted">140,000원</del><br>100,000원</td>
+                            <td class="align-middle text-primary"><del class="small text-muted">140,000원</del><br>100,000원</td>
+                            <td class="align-middle text-danger"><del class="small text-muted">160,000원</del><br>120,000원</td>
+                        </tr>
+                        <tr>
+                            <td class="align-middle">303호(스파)</td>
+                            <td class="align-middle">침대룸/거실형</td>
+                            <td class="align-middle">50㎡/15평</td>
+                            <td class="align-middle">2명/2명</td>
+                            <td class="align-middle"><del class="small text-muted">130,000원</del><br>90,000원</td>
+                            <td class="align-middle text-primary"><del class="small text-muted">130,000원</del><br>90,000원</td>
+                            <td class="align-middle text-danger"><del class="small text-muted">150,000원</del><br>110,000원</td>
+                        </tr>
+                        <tr>
+                            <td class="align-middle">304호(스파)</td>
+                            <td class="align-middle">거실룸/침대룸</td>
+                            <td class="align-middle">50㎡/15평</td>
+                            <td class="align-middle">2명/2명</td>
+                            <td class="align-middle"><del class="small text-muted">130,000원</del><br>90,000원</td>
+                            <td class="align-middle text-primary"><del class="small text-muted">130,000원</del><br>90,000원</td>
+                            <td class="align-middle text-danger"><del class="small text-muted">150,000원</del><br>110,000원</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>       <!-- 비수기 -->
+            <div class="tab-pane fade" id="mid_season" role="tabpanel" aria-labelledby="mid_season-tab">
+                <table class="table table-hover table-bordered">
+                    <caption style="caption-side:top;" class="text-right text-muted small">*아래 요금은 실제 적용일에 따라 다르게 적용될 수 있습니다.</caption>
+                    <thead class="text-center" style="background-color:#eee">
+                        <tr>
+                            <th>객실명</th>
+                            <th>형태</th>
+                            <th>평수</th>
+                            <th>기준/최대</th>
+                            <th>주중<br><small class="text-muted font-weight-bold">(일~목)</small></th>
+                            <th>금요일</th>
+                            <th>주말<br><small class="text-muted font-weight-bold">(토,공휴일 전일)</small></th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-center ">
+                        <tr>
+                            <td class="align-middle" class="align-middle">101호</td>
+                            <td class="align-middle" class="align-middle">거실형/복층형/침대룸</td>
+                            <td class="align-middle">106㎡/32평</td>
+                            <td class="align-middle">4명/4명</td>
+                            <td class="align-middle" class="align-middle">190,000원</td>
+                            <td class="align-middle text-primary">190,000원</td>
+                            <td class="align-middle text-danger">210,000원</td>
+                        </tr>
+                        <tr>
+                            <td class="align-middle">102호(독채)</td>
+                            <td class="align-middle">거실형/복층형/침대룸</td>
+                            <td class="align-middle">106㎡/32평</td>
+                            <td class="align-middle">4명/4명</td>
+                            <td class="align-middle">210,000원</td>
+                            <td class="align-middle text-primary">210,000원</td>
+                            <td class="align-middle text-danger">230,000원</td>
+                        </tr>
+                        <tr>
+                            <td class="align-middle">201호(스파)</td>
+                            <td class="align-middle">원룸형/침대룸</td>
+                            <td class="align-middle">33㎡/10평</td>
+                            <td class="align-middle">2명/2명</td>
+                            <td class="align-middle">80,000원</td>
+                            <td class="align-middle text-primary">80,000원</td>
+                            <td class="align-middle text-danger">100,000원</td>
+                        </tr>
+                        <tr>
+                            <td class="align-middle">202호(스파)</td>
+                            <td class="align-middle">원룸형/침대룸</td>
+                            <td class="align-middle">33㎡/10평</td>
+                            <td class="align-middle">2명/2명</td>
+                            <td class="align-middle">80,000원</td>
+                            <td class="align-middle text-primary">80,000원</td>
+                            <td class="align-middle text-danger">100,000원</td>
+                        </tr>
+                        <tr>
+                            <td class="align-middle">301호(스파)</td>
+                            <td class="align-middle">거실형/침대룸</td>
+                            <td class="align-middle">73㎡/22평</td>
+                            <td class="align-middle">2명/4명</td>
+                            <td class="align-middle">120,000원</td>
+                            <td class="align-middle text-primary">120,000원</td>
+                            <td class="align-middle text-danger">140,000원</td>
+                        </tr>
+                        <tr>
+                            <td class="align-middle">302호(스파)</td>
+                            <td class="align-middle">거실형/침대룸</td>
+                            <td class="align-middle">73㎡/22평</td>
+                            <td class="align-middle">2명/4명</td>
+                            <td class="align-middle">120,000원</td>
+                            <td class="align-middle text-primary">120,000원</td>
+                            <td class="align-middle text-danger">140,000원</td>
+                        </tr>
+                        <tr>
+                            <td class="align-middle">303호(스파)</td>
+                            <td class="align-middle">침대룸/거실형</td>
+                            <td class="align-middle">50㎡/15평</td>
+                            <td class="align-middle">2명/2명</td>
+                            <td class="align-middle">110,000원</td>
+                            <td class="align-middle text-primary">110,000원</td>
+                            <td class="align-middle text-danger">130,000원</td>
+                        </tr>
+                        <tr>
+                            <td class="align-middle">304호(스파)</td>
+                            <td class="align-middle">거실룸/침대룸</td>
+                            <td class="align-middle">50㎡/15평</td>
+                            <td class="align-middle">2명/2명</td>
+                            <td class="align-middle">110,000원</td>
+                            <td class="align-middle text-primary">110,000원</td>
+                            <td class="align-middle text-danger">130,000원</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>                   <!-- 준성수기 -->
+            <div class="tab-pane fade" id="peak_season" role="tabpanel" aria-labelledby="peak_season-tab">
+                <table class="table table-hover table-bordered">
+                    <caption style="caption-side:top;" class="text-right text-muted small">*아래 요금은 실제 적용일에 따라 다르게 적용될 수 있습니다.</caption>
+                    <thead class="text-center" style="background-color:#eee">
+                        <tr>
+                            <th>객실명</th>
+                            <th>형태</th>
+                            <th>평수</th>
+                            <th>기준/최대</th>
+                            <th>주중<br><small class="text-muted font-weight-bold">(일~목)</small></th>
+                            <th>금요일</th>
+                            <th>주말<br><small class="text-muted font-weight-bold">(토,공휴일 전일)</small></th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-center ">
+                        <tr>
+                            <td class="align-middle" class="align-middle">101호</td>
+                            <td class="align-middle" class="align-middle">거실형/복층형/침대룸</td>
+                            <td class="align-middle">106㎡/32평</td>
+                            <td class="align-middle">4명/4명</td>
+                            <td class="align-middle" class="align-middle">210,000원</td>
+                            <td class="align-middle text-primary">210,000원</td>
+                            <td class="align-middle text-danger">230,000원</td>
+                        </tr>
+                        <tr>
+                            <td class="align-middle">102호(독채)</td>
+                            <td class="align-middle">거실형/복층형/침대룸</td>
+                            <td class="align-middle">106㎡/32평</td>
+                            <td class="align-middle">4명/4명</td>
+                            <td class="align-middle">210,000원</td>
+                            <td class="align-middle text-primary">210,000원</td>
+                            <td class="align-middle text-danger">250,000원</td>
+                        </tr>
+                        <tr>
+                            <td class="align-middle">201호(스파)</td>
+                            <td class="align-middle">원룸형/침대룸</td>
+                            <td class="align-middle">33㎡/10평</td>
+                            <td class="align-middle">2명/2명</td>
+                            <td class="align-middle">90,000원</td>
+                            <td class="align-middle text-primary">90,000원</td>
+                            <td class="align-middle text-danger">110,000원</td>
+                        </tr>
+                        <tr>
+                            <td class="align-middle">202호(스파)</td>
+                            <td class="align-middle">원룸형/침대룸</td>
+                            <td class="align-middle">33㎡/10평</td>
+                            <td class="align-middle">2명/2명</td>
+                            <td class="align-middle">90,000원</td>
+                            <td class="align-middle text-primary">90,000원</td>
+                            <td class="align-middle text-danger">110,000원</td>
+                        </tr>
+                        <tr>
+                            <td class="align-middle">301호(스파)</td>
+                            <td class="align-middle">거실형/침대룸</td>
+                            <td class="align-middle">73㎡/22평</td>
+                            <td class="align-middle">2명/4명</td>
+                            <td class="align-middle">140,000원</td>
+                            <td class="align-middle text-primary">140,000원</td>
+                            <td class="align-middle text-danger">160,000원</td>
+                        </tr>
+                        <tr>
+                            <td class="align-middle">302호(스파)</td>
+                            <td class="align-middle">거실형/침대룸</td>
+                            <td class="align-middle">73㎡/22평</td>
+                            <td class="align-middle">2명/4명</td>
+                            <td class="align-middle">140,000원</td>
+                            <td class="align-middle text-primary">140,000원</td>
+                            <td class="align-middle text-danger">160,000원</td>
+                        </tr>
+                        <tr>
+                            <td class="align-middle">303호(스파)</td>
+                            <td class="align-middle">침대룸/거실형</td>
+                            <td class="align-middle">50㎡/15평</td>
+                            <td class="align-middle">2명/2명</td>
+                            <td class="align-middle">130,000원</td>
+                            <td class="align-middle text-primary">130,000원</td>
+                            <td class="align-middle text-danger">150,000원</td>
+                        </tr>
+                        <tr>
+                            <td class="align-middle">304호(스파)</td>
+                            <td class="align-middle">거실룸/침대룸</td>
+                            <td class="align-middle">50㎡/15평</td>
+                            <td class="align-middle">2명/2명</td>
+                            <td class="align-middle">130,000원</td>
+                            <td class="align-middle text-primary">130,000원</td>
+                            <td class="align-middle text-danger">150,000원</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>                 <!-- 성수기 -->
+        </div>
+        <div class="px-3">
+            <div class="h6 border-bottom py-3 font-weight-bolder">기간안내</div>
+            <ul class="text-muted small">
+                <li class="my-2"><strong>준성수기:2021년 07월 03일~2021년 07월 16일</strong></li>
+                <li class="my-2"><strong>성수기:2021년 07월 17일~2021년 08월 07일</strong></li>
+                <li class="my-2"><strong>준성수기:2021년 08월 08일~2021년 08월 28일</strong></li>
+            </ul>
+        </div>
+    <h5 id="reservation_info">[ 예 약 안 내 ]</h5>
+    <div>
+        <ul class="list-unstyled">입실·퇴실 안내
+            <li>입실 15:00 이후, 퇴실 11:00 이전</li>
+            <li>· 스키장 리프트 및 렌탈 할인권 필요 시 요청바랍니다.</li>
+            <li>· 21시 이후 입실하실 경우 펜션으로 미리 연락 부탁드립니다.</li>
+            <li>· 예약인원 외 지인초대 시 숙박하지 않더라도 인원추가비가 추가됩니다. 펜션지기와 미리 상의해주세요.</li>
+            <li>· 퇴실 시간 11시 초과 시 시간당 10,000원 추가됩니다.</li>
+            <li>· 계단이 많으니 예약 시 전경사진을 참고해주세요.</li>
+            <li>· 퇴실 시 객실 열쇠는 1층 열쇠함에 반납부탁드립니다.</li>
+        </ul>
+    </div>
+    <div>
+        <ul class="list-unstyled">확인사항 및 기타
+            <li>입실 15:00 이후, 퇴실 11:00 이전</li>
+            <li>· 스키장 리프트 및 렌탈 할인권 필요 시 요청바랍니다.</li>
+            <li>· 21시 이후 입실하실 경우 펜션으로 미리 연락 부탁드립니다.</li>
+            <li>· 예약인원 외 지인초대 시 숙박하지 않더라도 인원추가비가 추가됩니다. 펜션지기와 미리 상의해주세요.</li>
+            <li>· 퇴실 시간 11시 초과 시 시간당 10,000원 추가됩니다.</li>
+            <li>· 계단이 많으니 예약 시 전경사진을 참고해주세요.</li>
+            <li>· 퇴실 시 객실 열쇠는 1층 열쇠함에 반납부탁드립니다.</li>
+        </ul>
+    </div>
+    <div>
+        <ul class="list-unstyled">문의전화
+            <li>· 010-xxxx-xxxx</li>
+        </ul>
+    </div>
+    <h5 id="reservation_info">[ 예 약 안 내 ]</h5>
+</div>
+<!-- 위의 내용은 일단은 기본형식으로 하고 아래부터 HTML 코드로 작성하시면 됩니다. -->
+
+{% endblock %}
+<!-- 본문내용 끝 -->
+
+{% block script %}
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+{% endblock%}
