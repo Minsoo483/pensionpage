@@ -57,6 +57,11 @@ def test(request):
     return render(request, 'index/test.html')
 
 
+def popup(request):
+    return render(request, 'index/popuppage.html')
+
+
+
 def room101(request):
     return render(request, 'index/room/101.html')
 

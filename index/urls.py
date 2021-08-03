@@ -21,7 +21,7 @@ urlpatterns = [
     path('room/301/', views.room301, name='room301'),
 
 
-
+    path('popup/', views.popup, name='popup'),
     path('test/', views.test, name='test'),
 
 ]
