@@ -20,4 +20,8 @@ urlpatterns = [
     path('room/201/', views.room201, name='room201'),
     path('room/301/', views.room301, name='room301'),
 
+
+
+    path('test/', views.test, name='test'),
+
 ]
