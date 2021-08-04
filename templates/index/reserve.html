@@ -952,7 +952,10 @@
                 pay =  $(this).parents('.grandparent').find('.price').text()
                 pay = pay.substring(0,pay.length-1)*1
                 if($(this).prop("checked"))
+                {
                     roomBool[convertRN(rn)] = true;
+                    roomPrice[convertRN(rn)] = pay;
+                }
                 else
                     roomBool[convertRN(rn)] = false;
                 Payupdate()
